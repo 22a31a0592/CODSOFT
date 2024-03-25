@@ -1,0 +1,57 @@
+def add(A, B):
+    return A + B
+
+def subtract(A, B):
+    return A - B
+
+def multiply(A, B):
+    return A * B
+
+def divide(A, B):
+    if B == 0:
+        return "Error! Division by zero."
+    return A / B
+
+def floor_division(A, B):
+    if B == 0:
+        return "Error! Division by zero."
+    return A // B
+
+def power(A, B):
+    return A ** B
+
+print("Simple Calculator")
+
+while True:
+    print("\n operation choice:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Floor Division")
+    print("6. Power")
+    print("7. Exit")
+
+    X = input("Enter choice (1/2/3/4/5/6/7): ")
+
+    if X in ('1', '2', '3', '4','5', '6'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if X == '1':
+            print("Result:", add(num1, num2))
+        elif X == '2':
+            print("Result:", subtract(num1, num2))
+        elif X == '3':
+            print("Result:", multiply(num1, num2))
+        elif X == '4':
+            print("Result:", divide(num1, num2))
+        elif X == '5':
+            result = floor_division(num1, num2)
+        elif X == '6':
+            print("Result:", power(num1, num2))
+    elif X == '7':
+        print("Exit")
+        break
+    else:
+        print("Invalid input.")
